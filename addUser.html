@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add User</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/addUser.css"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+    <!-- auth -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+    
+    
+    <style>
+        body {
+            min-height: 110vh;
+            background-color: #4ca1af;
+            background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <ul class="list-group"  style="width: 50%; margin: auto; padding: 3em;">
+            <li class="list-group-item active">Register</li>
+            <li class="list-group-item">
+                <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="id">ID</label>
+                        <input required type="tel" class="form-control" id="id" pattern="[0-9]{12}"/>
+                        <!-- <div class="valid-feedback">Valid</div> -->
+                        <div class="invalid-feedback">Format 12 số</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input required type="email" class="form-control" id="email"/>
+                        <!-- <div class="valid-feedback">Valid</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input required type="text" class="form-control" id="name"/>
+                        <!-- <div class="valid-feedback">Valid</div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input required type="tel" class="form-control" id="phone" pattern="[0-9]{10}"/>
+                        <!-- <div class="valid-feedback">Valid</div> -->
+                        <div class="invalid-feedback">Format 10 số</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input required type="text" class="form-control" id="address"/>
+                        <!-- <div class="valid-feedback">Valid</div> -->
+                    </div>
+                    <button class="btn btn-primary" type="submit" id="addBtn">ADD</button>
+                    <button class="btn btn-danger" id="cancelBtn" onclick="cancel()">CANCEL</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+    <script src="./js/fireBase.js"></script>
+
+    <script src="./js/addUser.js"></script>
+    
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/8.6.3/firebase-auth.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/8.6.3/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/8.6.3/firebase-firestore.js"></script> -->
+    <script>
+        function cancel(){
+            location.replace("main.html");
+        }
+    </script>
+    
+
+</body>
+</html>
